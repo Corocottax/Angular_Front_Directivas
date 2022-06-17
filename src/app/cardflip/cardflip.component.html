@@ -1,0 +1,23 @@
+<button  (click)="darVuelta()">Dar vuelta</button>
+<div class="album">
+    <div *ngFor="let alumno of alumnos">
+        <ng-template [ngIf]="cartaFront">
+            <div class="carta">
+                <h1>{{alumno.nombre}}</h1>
+                <img class="imagenCarta" src={{alumno.imagen.src}} alt={{alumno.imagen.alt}} />
+                <p>{{alumno.motivacion}}</p>
+                <p>{{alumno.edad}}</p>
+            </div>
+        </ng-template>
+        <ng-template [ngIf]="!cartaFront">
+            <div class="carta">
+                <img class="icono" *ngIf="!alumno.cascos" src={{prohibido.src}} alt={{prohibido.alt}} />
+                <img class="icono" *ngIf="alumno.cascos" src={{cascos.src}} alt={{cascos.alt}} />
+                <img class="icono" *ngIf="!alumno.gafas" src={{prohibido.src}} alt={{prohibido.alt}} />
+                <img class="icono" *ngIf="alumno.gafas" src={{gafas.src}} alt={{gafas.alt}} />
+                <p>{{alumno.felicidad}}</p>
+                <p>{{alumno.descripcion}}</p>
+            </div>
+        </ng-template>
+    </div>
+</div>

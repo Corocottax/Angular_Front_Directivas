@@ -1,0 +1,27 @@
+.imagenCarta {
+    width: 200px;
+}
+
+.icono {
+    width: 100px;
+}
+
+.carta {
+    width: 300px;
+    height: 600px;
+    background-color: rgb(174, 174, 174);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: solid black 1px;
+    margin: 30px;
+}
+
+.album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
